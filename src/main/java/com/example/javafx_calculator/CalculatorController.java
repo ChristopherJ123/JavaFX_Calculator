@@ -105,6 +105,11 @@ public class CalculatorController {
     }
 
     @FXML
+    void pressButtonDecimal(ActionEvent event) {
+        pressButtonNumber(((Button) event.getSource()).getText());
+    }
+
+    @FXML
     void pressButtonAdd(ActionEvent event) {
         pressButtonOperator(((Button) event.getSource()).getText());
     }
@@ -130,27 +135,42 @@ public class CalculatorController {
     }
 
     @FXML
-    void pressButtonDecimal(ActionEvent event) {
-
-    }
-
-    @FXML
     void pressButtonNegative(ActionEvent event) {
-
+        if (operator == null) {
+            firstValue = firstValue.charAt(0) != '-' ? "-".concat(firstValue) : firstValue.substring(1);
+        } else {
+            secondValue = secondValue.charAt(0) != '-' ? "-".concat(firstValue) : firstValue.substring(1);
+        }
+        updateScreen();
     }
 
     @FXML
     public void pressButtonOneOverX(ActionEvent event) {
-
+        if (operator == null) {
+            firstValue = String.valueOf((double) 1 / Double.parseDouble(firstValue));
+        } else {
+            secondValue = String.valueOf((double) 1 / Double.parseDouble(secondValue));
+        }
+        updateScreen();
     }
 
     @FXML
     public void pressButtonPowerOf2(ActionEvent event) {
-
+        if (operator == null) {
+            firstValue = String.valueOf(Math.pow(Double.parseDouble(firstValue), 2));
+        } else {
+            secondValue = String.valueOf(Math.pow(Double.parseDouble(secondValue), 2));
+        }
+        updateScreen();
     }
 
     @FXML
     public void pressButtonSqrt(ActionEvent event) {
-
+        if (operator == null) {
+            firstValue = String.valueOf(Math.sqrt(Double.parseDouble(firstValue)));
+        } else {
+            secondValue = String.valueOf(Math.sqrt(Double.parseDouble(secondValue)));
+        }
+        updateScreen();
     }
 }
