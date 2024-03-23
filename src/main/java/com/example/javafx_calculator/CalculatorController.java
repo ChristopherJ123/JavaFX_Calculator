@@ -32,6 +32,7 @@ public class CalculatorController {
             secondValue = secondValue.concat(number);
         }
         updateScreen();
+        System.out.println("Hello");
     }
 
     void pressButtonOperator(String operator) {
