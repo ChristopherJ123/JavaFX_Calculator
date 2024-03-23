@@ -17,6 +17,5 @@ public class CalculatorApplication extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // Test commmit to master
     }
 }
