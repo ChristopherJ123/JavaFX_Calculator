@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_calculator.CalculatorController">
    <children>
-      <TextField fx:id="calculatorTextField" layoutX="20.0" layoutY="21.0" prefHeight="100.0" prefWidth="360.0" />
+      <TextField fx:id="calculatorTextField" layoutX="20.0" layoutY="21.0" onKeyPressed="#calculatorKeyListener" prefHeight="100.0" prefWidth="360.0" />
       <Button layoutX="20.0" layoutY="210.0" mnemonicParsing="false" onAction="#pressButton7" prefHeight="60.0" prefWidth="80.0" text="7" />
       <Button layoutX="113.0" layoutY="210.0" mnemonicParsing="false" onAction="#pressButton8" prefHeight="60.0" prefWidth="80.0" text="8" />
       <Button layoutX="207.0" layoutY="210.0" mnemonicParsing="false" onAction="#pressButton9" prefHeight="60.0" prefWidth="80.0" text="9" />

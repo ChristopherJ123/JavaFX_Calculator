@@ -11,12 +11,11 @@ public class CalculatorApplication extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(CalculatorApplication.class.getResource("calculator-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            stage.setTitle("Calculator");
+            stage.setTitle("Calculator by ChristopherJ123");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // test webhook
     }
 }
