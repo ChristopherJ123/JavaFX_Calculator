@@ -24,7 +24,7 @@
       <Button layoutX="207.0" layoutY="426.0" mnemonicParsing="false" onAction="#pressButtonDecimal" prefHeight="60.0" prefWidth="80.0" text="." />
       <Button layoutX="300.0" layoutY="426.0" mnemonicParsing="false" onAction="#pressButtonEqual" prefHeight="60.0" prefWidth="80.0" text="=" />
       <Button layoutX="20.0" layoutY="138.0" mnemonicParsing="false" onAction="#pressButtonOneOverX" prefHeight="60.0" prefWidth="80.0" text="1/x" />
-      <Button layoutX="113.0" layoutY="138.0" mnemonicParsing="false" onAction="#pressButtonPowerOf2" prefHeight="60.0" prefWidth="80.0" text="x^2" />
+      <Button layoutX="113.0" layoutY="138.0" mnemonicParsing="false" onAction="#pressButtonPowerOfX" prefHeight="60.0" prefWidth="80.0" text="^" />
       <Button layoutX="207.0" layoutY="138.0" mnemonicParsing="false" onAction="#pressButtonSqrt" prefHeight="60.0" prefWidth="80.0" text="√x" />
       <Button layoutX="300.0" layoutY="138.0" mnemonicParsing="false" onAction="#pressButtonDivision" prefHeight="60.0" prefWidth="80.0" text="÷" />
    </children>
