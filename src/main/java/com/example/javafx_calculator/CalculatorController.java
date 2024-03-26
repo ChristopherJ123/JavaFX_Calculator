@@ -72,6 +72,7 @@ public class CalculatorController {
                 case "-" -> firstValue = String.valueOf(Double.parseDouble(firstValue) - Double.parseDouble(secondValue));
                 case "×", "*" -> firstValue = String.valueOf(Double.parseDouble(firstValue) * Double.parseDouble(secondValue));
                 case "÷", "/" -> firstValue = String.valueOf(Double.parseDouble(firstValue) / Double.parseDouble(secondValue));
+                case "^" -> firstValue = String.valueOf(Math.pow(Double.parseDouble(firstValue), Double.parseDouble(secondValue)));
             }
             if (firstValue.substring(firstValue.length()-2).equals(".0")) firstValue = firstValue.replace(".0", ""); // Check if result has a ".0" as an ending and remove it so that you can input normally.
             this.operator = null;
@@ -197,14 +198,8 @@ public class CalculatorController {
     }
 
     @FXML
-    public void pressButtonPowerOf2(ActionEvent event) {
-        if (Objects.equals(firstValue, "")) return;
-        if (operator == null) {
-            firstValue = String.valueOf(Math.pow(Double.parseDouble(firstValue), 2));
-        } else {
-            secondValue = String.valueOf(Math.pow(Double.parseDouble(secondValue), 2));
-        }
-        updateScreen();
+    public void pressButtonPowerOfX(ActionEvent event) {
+        pressButtonOperator(((Button) event.getSource()).getText());
     }
 
     @FXML
@@ -222,9 +217,10 @@ public class CalculatorController {
     public void calculatorKeyListener(KeyEvent event) {
         String input = event.getText();
         if (event.isShiftDown()) {
-            if (input.matches("[8=]")) {
+            if (input.matches("[8=6]")) {
                 if (input.equals("8")) pressButtonOperator("*");
                 else if (input.equals("=")) pressButtonOperator("+");
+                else if (input.equals("6")) pressButtonOperator("^");
             }
         } else if (input.matches("[0-9]")) {
             pressButtonNumber(input);
