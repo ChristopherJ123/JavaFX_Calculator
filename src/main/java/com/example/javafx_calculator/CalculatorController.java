@@ -63,8 +63,8 @@ public class CalculatorController {
         if (this.operator == null) {
             if (!operator.equals("=")) {
                 this.operator = operator;
-                isDecimal = false; // Reset isDecimal check for new prompts
-            } else isDecimal = firstValue.contains("."); // isDecimal check for end result
+                isDecimal = false;
+            } else isDecimal = firstValue.contains(".");
         } else {
             if (Objects.equals(secondValue, "")) return;
             switch (this.operator) {
