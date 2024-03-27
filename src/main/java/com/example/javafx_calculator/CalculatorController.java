@@ -64,7 +64,7 @@ public class CalculatorController {
             if (!operator.equals("=")) {
                 this.operator = operator;
                 isDecimal = false;
-            } else isDecimal = firstValue.contains("."); // isDecimal check for end result
+            } else isDecimal = firstValue.contains(".");
         } else {
             if (Objects.equals(secondValue, "")) return;
             switch (this.operator) {
