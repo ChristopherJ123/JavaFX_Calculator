@@ -33,6 +33,19 @@ public class CalculatorController {
         );
     }
 
+    @FXML
+    void pressButtonClear() {
+        firstValue = "";
+        secondValue = "";
+        operator = null;
+        updateScreen();
+    }
+
+    @FXML
+    void pressButtonBackspace() {
+        pressButtonBackslash();
+    }
+
     void pressButtonNumber(String number) {
         if (operator == null) {
             firstValue = firstValue.concat(number);
